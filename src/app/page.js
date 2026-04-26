@@ -1,12 +1,14 @@
 import Banner from '@/components/Banner/Banner';
-import TotalFriends from '@/components/TotalFriends/TotalFriends';
+import TotalFriendsCount from '@/components/TotalFriendsCount/TotalFriendsCount';
 import React from 'react';
+import FriendPage from './friends/page';
 
 const page = () => {
   return (
     <div>
       <Banner />
-      <TotalFriends />
+      <TotalFriendsCount />
+      <FriendPage />
     </div>
   );
 };
