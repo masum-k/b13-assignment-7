@@ -1,11 +1,16 @@
+"use client"
+
 import Image from 'next/image';
 import React from 'react';
-import { PiArchive, PiChatTextBold, PiPhoneCallBold, PiVideoCameraBold } from 'react-icons/pi';
+import { PiArchive } from 'react-icons/pi';
 import { RiDeleteBin6Fill, RiNotificationSnoozeLine } from 'react-icons/ri';
+import TimeLineButton from '../Buttons/TimeLineButton';
+
 
 const CardDetails = ({ friendsCards }) => {
     const { name, tags, status, bio, email, picture, contact_frequency_days,
         days_since_contact } = friendsCards
+
     return (
         <div className='my-16'>
             {/* Details */}
@@ -81,15 +86,7 @@ const CardDetails = ({ friendsCards }) => {
                         <h1 className='text-[#244D3F] text-xl'>Quick Check-In</h1>
                     </div>
                     <div className='md:flex gap-4'>
-                        <div className='w-52 mx-auto card items-center cursor-pointer py-3 bg-base-200 shadow'>
-                            <p><PiPhoneCallBold size={20} /></p> <p>Call</p>
-                        </div>
-                        <div className='w-52 mx-auto card items-center ursor-pointer py-3 bg-base-200 shadow'>
-                            <PiChatTextBold size={20} /> <p>Text</p>
-                        </div>
-                        <div className='w-52 mx-auto card items-center ursor-pointer py-3 bg-base-200 shadow'>
-                            <PiVideoCameraBold size={20} /> <p>Video</p>
-                        </div>
+                        <TimeLineButton name={name}/>
                     </div>
                 </div>
             </div>

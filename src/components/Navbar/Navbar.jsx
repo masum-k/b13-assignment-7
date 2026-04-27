@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import { CiClock2 } from 'react-icons/ci';
+import { ImStatsDots } from 'react-icons/im';
 import { RiHome2Line } from 'react-icons/ri';
 
 const Navbar = () => {
@@ -35,10 +37,18 @@ const Navbar = () => {
                     src="/logo.png"
                     alt='logo' />
             </div>
-            <div className="navbar-end">
+            <div className="gap-2 navbar-end invisible md:visible">
                 <Link href="/" className={`btn flex justify-center items-center ${pathname === '/' ? 'bg-[#244D3F] text-white' : ""}`}>
                     <RiHome2Line />
                     Home
+                </Link>
+                <Link href="/timeline" className={`btn flex justify-center items-center ${pathname === '/timeline' ? 'bg-[#244D3F] text-white' : ""}`}>
+                    <CiClock2 />
+                    TimeLine
+                </Link>
+                <Link href="/stats" className={`btn flex justify-center items-center ${pathname === '/stats' ? 'bg-[#244D3F] text-white' : ""}`}>
+                    <ImStatsDots />
+                    Stats
                 </Link>
             </div>
         </div >
