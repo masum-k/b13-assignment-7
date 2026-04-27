@@ -36,7 +36,7 @@ const Navbar = () => {
                     alt='logo' />
             </div>
             <div className="navbar-end">
-                <Link href="/" className={`btn flex justify-center items-center text-white ${pathname === '/' ? 'bg-[#244D3F]' : ""}`}>
+                <Link href="/" className={`btn flex justify-center items-center ${pathname === '/' ? 'bg-[#244D3F] text-white' : ""}`}>
                     <RiHome2Line />
                     Home
                 </Link>

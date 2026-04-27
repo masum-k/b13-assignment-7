@@ -1,7 +1,7 @@
 import Cards from '@/components/Cards/Cards';
 
 const FriendPage = async () => {
-    const friendsData = await fetch('http://localhost:3001/card')
+    const friendsData = await fetch('https://69ef2557112e1b968e241194.mockapi.io/friends')
     const friendsCards = await friendsData.json()
     return (
         <>
