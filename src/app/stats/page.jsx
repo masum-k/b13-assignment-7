@@ -16,6 +16,7 @@ const StatsPage = () => {
         { name: 'Text', value: textCount, fill: '#7F37F5' },
         { name: 'Video', value: videoCount, fill: '#37A163' },
     ];
+    console.log(data)
     return (
         <div className="w-full text-center my-10">
             <h1 className="text-3xl font-bold mb-4">Stats</h1>
