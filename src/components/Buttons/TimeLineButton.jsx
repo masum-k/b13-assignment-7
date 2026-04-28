@@ -11,13 +11,13 @@ const TimeLineButton = ({ name }) => {
 
     return (
         <>
-            <div onClick={() => timeLineData("call")} className=' w-52 mx-auto card items-center cursor-pointer py-3 bg-base-200 shadow'>
+            <div onClick={() => timeLineData("Call")} className=' w-52 mx-auto card items-center cursor-pointer py-3 bg-base-200 shadow'>
                 <PiPhoneCallBold size={20} /><p>Call</p>
             </div>
-            <div onClick={() => timeLineData("text")} className='w-52 mx-auto card items-center cursor-pointer py-3 bg-base-200 shadow'>
+            <div onClick={() => timeLineData("Text")} className='w-52 mx-auto card items-center cursor-pointer py-3 bg-base-200 shadow'>
                 <PiChatTextBold size={20} /><p>Text</p>
             </div>
-            <div onClick={() => timeLineData("video")} className='w-52 mx-auto card items-center cursor-pointer py-3 bg-base-200 shadow'>
+            <div onClick={() => timeLineData("Video")} className='w-52 mx-auto card items-center cursor-pointer py-3 bg-base-200 shadow'>
                 <PiVideoCameraBold size={20} /> <p>Video</p>
             </div>
         </>

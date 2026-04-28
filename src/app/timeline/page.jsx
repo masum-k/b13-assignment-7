@@ -9,31 +9,31 @@ const TimeLinePage = () => {
     const { timeLineAdded } = useContext(TimeLineContext)
 
     return (
-        <div>
+        <div className='md:w-5xl mt-6 '>
+            <h1 className='text-3xl font-bold'>Timeline</h1>
             {
-                timeLineAdded.map((added, ind) => {
-                    return (
-                        <div key={ind} className='bg-white shadow '>
-                            {/* 
-                            condition1 ?"Value 1": condition2 ? "Value 2": "Default Value";
-                             "call" ? "/call.png": added.action === "text"?"/text.png":"/video.png"
-                            */}
-                            <Image
-                                src={added.action === 
-                                    'call'? "/call.png" 
-                                    : added.action === 'text'?"/text.png"
-                                    :"/video.png"}
-                                width={30}
-                                height={30}
-                                alt={added.name}
-                            />
-                            <h1>Call with {added.name}</h1>
-                            <h1>bye</h1>
-                        </div>
+                timeLineAdded.length === 0 ? <div className='bg-white md:w-96 mx-auto shadow text-center p-4 gap-2 mt-4 mb-2 rounded-xl font-semibold'>No Chat History</div> :
+                    timeLineAdded.map((added, ind) => {
+                        return (
+                            <div key={ind} className='bg-white shadow flex items-center p-4 gap-2 mt-4 mb-2 rounded-xl'>
+                                <Image
+                                    src={added.action ===
+                                        'Call' ? "/call.png"
+                                        : added.action === 'Text' ? "/text.png"
+                                            : "/video.png"}
+                                    width={30}
+                                    height={30}
+                                    alt={added.name}
+                                />
+                                <div>
 
-
+                                    <p><span className='text-[#244D3F] font-medium text-xl'>{added.action}</span> with {added.name}</p>
+                                    <p>April 28, 2026</p>
+                                </div>
+                            </div>
+                        )
+                    }
                     )
-                })
             }
         </div>
     );
