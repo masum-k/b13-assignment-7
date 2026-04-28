@@ -8,8 +8,8 @@ import TimeLineButton from '../Buttons/TimeLineButton';
 
 
 const CardDetails = ({ friendsCards }) => {
-    const { name, tags, status, bio, email, picture, contact_frequency_days,
-        days_since_contact } = friendsCards
+    const { name, tags, status, goal, bio, email, picture, contact_frequency_days,
+        days_since_contact,next_due_date } = friendsCards
 
     return (
         <div className='my-16'>
@@ -42,16 +42,16 @@ const CardDetails = ({ friendsCards }) => {
                 <div>
                     <div className='md:flex text-center gap-4'>
                         <div className='bg-white shadow card p-8 mx-auto w-60 mb-2'>
-                            <h1 className='text-2xl text-[#244D3F]'>10</h1>
-                            <p className='text-[#64748B]'>Total Friends</p>
+                            <h1 className='text-2xl text-[#244D3F]'>{days_since_contact}</h1>
+                            <p className='text-[#64748B]'>Days Since Contact</p>
                         </div>
                         <div className='bg-white shadow card p-8 mx-auto w-60 mb-2'>
-                            <h1 className='text-2xl text-[#244D3F]'>10</h1>
-                            <p className='text-[#64748B]'>Total Friends</p>
+                            <h1 className='text-2xl text-[#244D3F]'>{goal}</h1>
+                            <p className='text-[#64748B]'>Goal (Days)</p>
                         </div>
                         <div className='bg-white shadow card p-8 mx-auto w-60 mb-2'>
-                            <h1 className='text-2xl text-[#244D3F]'>10</h1>
-                            <p className='text-[#64748B]'>Total Friends</p>
+                            <h1 className='text-2xl text-[#244D3F]'>{next_due_date}</h1>
+                            <p className='text-[#64748B]'>Next Due Date</p>
                         </div>
                     </div>
                     {/* Relationship Goal Card */}
@@ -86,7 +86,7 @@ const CardDetails = ({ friendsCards }) => {
                         <h1 className='text-[#244D3F] text-xl'>Quick Check-In</h1>
                     </div>
                     <div className='md:flex gap-4'>
-                        <TimeLineButton name={name}/>
+                        <TimeLineButton name={name} />
                     </div>
                 </div>
             </div>
