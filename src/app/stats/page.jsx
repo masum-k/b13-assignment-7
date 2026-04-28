@@ -12,9 +12,9 @@ const StatsPage = () => {
     const videoCount = timeLineAdded.filter(item => item.action === "Video").length;
 
     const data = [
-        { name: 'Call', value: callCount, fill: '#0088FE' },
-        { name: 'Text', value: textCount, fill: '#00C49F' },
-        { name: 'Video', value: videoCount, fill: '#FFBB28' },
+        { name: 'Call', value: callCount, fill: '#244D3F' },
+        { name: 'Text', value: textCount, fill: '#7F37F5' },
+        { name: 'Video', value: videoCount, fill: '#37A163' },
     ];
     return (
         <div className="w-full text-center my-10">
