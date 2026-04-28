@@ -6,10 +6,15 @@ import { Legend, Pie, PieChart, Tooltip } from 'recharts';
 
 const StatsPage = () => {
     const { timeLineAdded } = useContext(TimeLineContext);
+
+    const callCount = timeLineAdded.filter(item => item.action === "Call").length;
+    const textCount = timeLineAdded.filter(item => item.action === "Text").length;
+    const videoCount = timeLineAdded.filter(item => item.action === "Video").length;
+
     const data = [
-        { name: 'Call', value: timeLineAdded.length, fill: '#0088FE' },
-        { name: 'Text', value: 300, fill: '#00C49F' },
-        { name: 'Video', value: 300, fill: '#FFBB28' },
+        { name: 'Call', value: callCount, fill: '#0088FE' },
+        { name: 'Text', value: textCount, fill: '#00C49F' },
+        { name: 'Video', value: videoCount, fill: '#FFBB28' },
     ];
     return (
         <div className="w-full text-center my-10">

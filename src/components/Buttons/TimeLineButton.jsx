@@ -5,6 +5,7 @@ import { PiChatTextBold, PiPhoneCallBold, PiVideoCameraBold } from 'react-icons/
 const TimeLineButton = ({ name }) => {
 
     const { timeLineAdded, setTimeLineAdded } = useContext(TimeLineContext)
+    console.log(timeLineAdded)
     const timeLineData = (action) => {
         setTimeLineAdded([...timeLineAdded, { name, action }])
     }
