@@ -20,15 +20,18 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        <Link href="/" className={`btn flex justify-center items-center ${pathname === '/' ? 'bg-[#244D3F] text-white' : ""}`}>
+                            <RiHome2Line />
+                            Home
+                        </Link>
+                        <Link href="/timeline" className={`btn flex justify-center items-center ${pathname === '/timeline' ? 'bg-[#244D3F] text-white' : ""}`}>
+                            <CiClock2 />
+                            TimeLine
+                        </Link>
+                        <Link href="/stats" className={`btn flex justify-center items-center ${pathname === '/stats' ? 'bg-[#244D3F] text-white' : ""}`}>
+                            <ImStatsDots />
+                            Stats
+                        </Link>
                     </ul>
                 </div>
                 <Image

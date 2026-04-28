@@ -16,7 +16,7 @@ const CardDetails = ({ friendsCards }) => {
             {/* Details */}
             <div className='md:flex gap-5'>
                 {/* Profile */}
-                <div className="card w-80 mx-auto bg-base-100 shadow-sm py-3 px-6">
+                <div className="card w-80 mx-auto mt-4 bg-base-100 shadow-sm py-3 px-6">
                     <figure>
                         <Image
                             src={picture}
@@ -40,7 +40,7 @@ const CardDetails = ({ friendsCards }) => {
                 </div>
                 {/* Contact History Card */}
                 <div>
-                    <div className='md:flex text-center gap-4'>
+                    <div className='md:flex text-center mt-4 gap-4'>
                         <div className='bg-white shadow card p-8 mx-auto w-60 mb-2'>
                             <h1 className='text-2xl text-[#244D3F]'>{days_since_contact}</h1>
                             <p className='text-[#64748B]'>Days Since Contact</p>
@@ -56,7 +56,7 @@ const CardDetails = ({ friendsCards }) => {
                     </div>
                     {/* Relationship Goal Card */}
                     <div className='bg-white p-8 mt-5 shadow card'>
-                        <div className='md:flex justify-between'>
+                        <div className='flex justify-between'>
                             <h3 className='text-xl font-semibold text-[#244D3F]'>
                                 Relationship Goal
                             </h3>
@@ -67,7 +67,7 @@ const CardDetails = ({ friendsCards }) => {
                 </div>
             </div>
             <div className='md:flex gap-5 mt-5'>
-                <div className='w-80 space-y-2 font-semibold'>
+                <div className='w-80 mb-5 space-y-2 font-semibold'>
                     <div className='flex btn items-center gap-2 bg-white px-5 py-2 justify-center'>
                         <RiNotificationSnoozeLine />
                         <p>Snooze 2 weeks</p>
@@ -81,11 +81,11 @@ const CardDetails = ({ friendsCards }) => {
                         <p>Delete</p>
                     </div>
                 </div>
-                <div className='flex-1 justify-center px-6 card bg-white shadow'>
-                    <div className='mb-3'>
+                <div className='flex-1 justify-center mb-5 px-6 card bg-white shadow'>
+                    <div className='mb-2'>
                         <h1 className='text-[#244D3F] text-xl'>Quick Check-In</h1>
                     </div>
-                    <div className='md:flex gap-4'>
+                    <div className='md:flex '>
                         <TimeLineButton name={name} />
                     </div>
                 </div>
